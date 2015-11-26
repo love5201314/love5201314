@@ -7,6 +7,9 @@ window.onload=window.onscroll=window.onresize=function(){
 	var oV=document.querySelector('.video');
 	var bFlag=false;
 	var iNow=0;
+	//导航动画
+	var oNav=document.querySelector('header');
+	oNav.style.top=0;
 	btn();
 	//翻页效果
 	addWheel(document,function(down){
@@ -23,20 +26,42 @@ window.onload=window.onscroll=window.onresize=function(){
 		if(iNow<0)iNow=0;
 		if(iNow>aCon.length-1)iNow=aCon.length-1;
 
+		//导航栏变化
+		if(iNow!=0)
+		{
+			oNav.style.paddingTop='10px';
+			oNav.style.boxShadow='0 5px 5px #000';
+		}
+		else
+		{
+			oNav.style.paddingTop='20px';
+			oNav.style.boxShadow='';
+		}
+
 		move(oBox,{top:-iNow*document.documentElement.clientHeight},
 			{'complete':function(){
 				bFlag=false;
 		}});
 		btn();
 	});
-	//返回顶部
+	/*//返回顶部
 	oRet.onclick=function(){
 		iNow=0;
 		move(oBox,{top:-iNow*document.documentElement.clientHeight});
 		btn();
-	};
+	};*/
 	//nav按钮
 	function btn(){
+		if(iNow==0)
+		{	
+			oNav.style.paddingTop='20px';
+			oNav.style.boxShadow='';
+		}
+		else
+		{
+			oNav.style.paddingTop='10px';
+			oNav.style.boxShadow='0 5px 5px #000';
+		}
 		startMove(aBtn_bg,aBtn[iNow].offsetLeft);
 		for(var i=0;i<aBtn.length-1;i++)
 		{	aBtn[i].dateIndex=i;
@@ -48,17 +73,28 @@ window.onload=window.onscroll=window.onresize=function(){
 			};
 			aBtn[i].onclick=function(){
 				iNow=this.dateIndex;
+				
 				move(oBox,{top:-iNow*document.documentElement.clientHeight},
 					{'complete':function(){
 						bFlag=false;
 				}});
+				if(iNow==0)
+				{	
+					oNav.style.paddingTop='20px';
+					oNav.style.boxShadow='';
+				}
+				else
+				{
+					oNav.style.paddingTop='10px';
+					oNav.style.boxShadow='0 5px 5px #000';
+				}
 			};
 		}
 		
 	}
 
-
-	//首屏背景
+	
+	/*//首屏背景
 	var oC=document.querySelector('#c1');
 	var gd=oC.getContext('2d');
 	var winW=document.documentElement.clientWidth;
@@ -147,7 +183,7 @@ window.onload=window.onscroll=window.onresize=function(){
 		var pH=1;
 		gd.fillStyle='#fff';
 		gd.fillRect(p.x-pW/2,p.y-pH/2,pW,pH);
-	}
+	}*/
 
 
 

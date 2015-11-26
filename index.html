@@ -1,90 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/inme.css">
 	<link rel="stylesheet" href="css/index.css">
+
+	
 	<script src="js/move.js"></script>
 	<script src="js/inme.js"></script>
 	<script src="js/index.js"></script>
 </head>
 <body>
-	<ul class="nav clearFix">
-		<li><a href="javascript:;">首页</a></li>
-		<li><a href="javascript:;">我的作品</a></li>
-		<li><a href="javascript:;">技能</a></li>
-		<li><a href="javascript:;">技能</a></li>
-		<li class="active"></li>
-	</ul>
-	<div class="box">
+	<header class="clearFix">
+		<div class="fl loog">My website</div>
+		<ul class="nav clearFix fr">
+			<li><a href="javascript:;">首 页</a></li>
+			<li><a href="javascript:;">我的作品</a></li>
+			<li><a href="javascript:;">技 能</a></li>
+			<li><a href="javascript:;">技 能</a></li>
+			<li class="active"></li>
+		</ul>
+	</header>
+	<div class="box" id="large-header">
 		<div class="box_z">
 			<div class="can_box">
-				<canvas id="c1" width="800" height="600"></canvas>
+				<!-- <canvas id="c1" width="800" height="600"></canvas> -->
+				<div id="large-header" class="large-header">
+					<canvas id="demo-canvas"></canvas>
+					<script src="js/TweenLite.min.js"></script>
+					<script src="js/EasePack.min.js"></script>
+					<script src="js/demo-1.js"></script>
+				</div>
+				<div class="left">简历</div>
+				<div class="right">简历</div>
 			</div>
 		</div>
 		<div class="box_z">2222222222222222222222</div>
 		<div class="box_z">3333333333333333333333</div>
 		<div class="box_z">4444444444444444444444</div>
-		<a href="javascriot:;" class="return">返回顶部</a>
+		<!-- <a href="javascriot:;" class="return">返回顶部</a> -->
 	</div>
 </body>
 </html>
-=======
-<meta charset="UTF-8">
-<title>Document</title>
-<style>
-
-	#box{ width:300px; height:300px; margin:50px auto; overflow:hidden;}
-	#box span{ width:98px; height:38px; background:#00FFFF; float:left; border:1px solid #fff; border-radius:10%;}
-	#box div{ float:left; width:298px; height:200px; background:#669966; border-radius:3%; display:none; font-size:50px; font-weight:bold; font-family:Microsoft YaHe; text-align:center;color:#fff; text-shadow:0 0 10px #fff,0 0 30px #fff,0 0 70px #fff,0 0 100px #fff,0 0 120px #fff;}
-	#box span.active{ background:#399; }
-	#box div.show{ display:block; }
-</style>
-<script>
-function Tab(){
-	this.oBox=document.getElementById('box');
-	this.aBtn=this.oBox.getElementsByTagName('span');
-	this.aDiv=this.oBox.getElementsByTagName('div');
-	this.init();
-}
-Tab.prototype.init=function(){
-	var _this=this;
-
-	for(var i=0;i<this.aBtn.length;i++)
-	{	
-		(function(index){
-			_this.aBtn[i].onclick=function(){
-				_this.fnClick(this,index);
-			};
-		})(i)
-		
-	}
-};
-Tab.prototype.fnClick=function(aBtn,index){
-	for(var i=0;i<this.aBtn.length;i++)
-	{
-		this.aBtn[i].className='';
-		this.aDiv[i].className='';
-	}
-	aBtn.className='active';
-	this.aDiv[index].className='show';
-};
-window.onload=function(){
-	new Tab();
-};
-</script>
-</head>
-<body>
-	<div id="box">
-		<span class="active">111</span>
-		<span>222</span>
-		<span>333</span>
-		<div class="show">11111111</div>
-		<div>22222222</div>
-		<div>33333333</div>
-	</div>
-</body>
-</html>
->>>>>>> b7da1fcc1525c2c825e4eafe8706a5ac30dfa865

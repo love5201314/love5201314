@@ -1,7 +1,7 @@
 function move(obj,json, options)
 {
     options=options||{};
-    var duration=options.duration||1000;
+    var duration=options.duration||700;
     var easing=options.easing||Tween.Linear;//easing指向json中的函数体
     var start={};
     var dis={};
