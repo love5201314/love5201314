@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<style>
+		*{ margin:0; padding:0;}
+		b,strong{ font-weight:noroal;}
+		i,em{ font-style:normal;}
+		li{ list-style:none;}
+		a{ text-decoration:none;}
+		img{ display:block;}
+
+		.clearFix:after{ content:''; clear:both; display:block;}
+		.fl{ float:left; display:inline;}
+		.fr{ float:right; display:inline;}
+		
+		html{font-size:20px; }
+		.box{ width:16rem; margin:0 auto;}
+		header{ width:100%; height:2.225rem; background:#262626; display: -webkit-box; border-bottom:0.05rem solid #4bccae;}
+		header .left img,header .right img{ width:1.45rem; height:1.175rem;}
+		header h3{ -webkit-box-flex:1; text-align:center; height:100%;line-height:2.225rem; color:#fff;}
+		header .left,header .right{ width:1.45rem; height:1.175rem; padding:0.5rem 0.4rem; display:block;}
+		nav{ display:-webkit-box; width:100%; height:2rem; background:#fafafa; border-bottom:0.05rem solid #d3e8fd;}
+
+		nav a{ -webkit-box-flex:1; display:block; padding-left:1.425rem; text-align:center; line-height:2rem; color:#878787; font-size:0.75rem;}
+		nav a:nth-child(1){ background:url(images/guokr-rem_10.gif) no-repeat 1.4rem; background-size:1.45rem;}
+		nav a:nth-child(2){ background:url(images/guokr-rem_12.jpg) no-repeat 1.4rem;background-size:1.45rem;}
+		.img{ position:relative;}
+		.img img{ width:100%; }
+		.img p{ position:absolute;left:0; bottom:0; width:100%; height:2rem; line-height:2rem; text-align:center; color:#fff; background: rgba(0,0,0,.5)}
+		.section{ margin-bottom:-0.4rem; }
+		.section li a{ width:calc(100% - 0.8rem); text-overflow:ellipsis; white-space:nowrap; overflow:hidden; color:#333; line-height:2rem; height:2rem;  border-bottom:0.05rem solid #ececec; display: inline-block; margin:0 0.4rem;}
+		.section_box{ width:100%; overflow:hidden; border-bottom:0.15rem solid #57c0af;}
+		.min_title{ width:calc(100% - 1.5rem); height:2rem; line-height:2rem;  margin:0 0.75rem; background: url(images/guokr-rem_19.gif) no-repeat right; background-size:1.5rem 1.5rem;}
+		.title_box{ background:#fafafa; border-bottom:0.05rem solid #e2e2e2; }
+		.min_nav{ width:100%; height:2rem; line-height:2rem; border-bottom:0.05rem solid #ececec;;}
+		.min_nav li{ width:3.1rem; float:left; text-align:center;color:#333;}
+		.min_nav li.active{ border-bottom:0.15rem solid #dc3d5b; margin-bottom:-0.075rem;}
+		.li_img{ width:calc(100% - 0.8rem); margin:0 0.4rem;}
+		.li_img .fr{ font-size:0.625rem; color:#9a9a9a; width:8.325rem; margin-right:0.65rem; line-height:1.25rem;}
+		.li_img img{ width:5.2rem; margin-left:0.3rem; }
+		.foot{ width:100%; height:3rem; line-height:3rem; text-align:center; display:block; color:#8e8d92; background:url(images/footer.jpg) no-repeat 5.5rem #fafafa; padding-left:1.4rem; background-size:1.4rem; position:relative; z-index:1; border-top:0.05rem solid #e3e3e3;}
+		footer{ height:3.75rem; width:16rem; background:#262626; line-height:3.75rem; font-size:0.75rem; font-weight:bold;}
+		footer div{ width:calc(50% - 1px - 1.45rem); text-align:center; display:inline-block; float:left;}
+		footer div:nth-child(1){ background:url(images/guokr-rem_05.gif) no-repeat 2.05rem; background-size:1.45rem; padding-left:1.45rem; }
+		footer div:nth-child(3){ background:url(images/guokr-rem_31.png) no-repeat 1.75rem; background-size:0.65rem; padding-left:1.45rem; }
+		footer span{ width:2px; height:1.9rem; display:inline-block; background:#666; margin-top:0.9rem; float:left;}
+	</style>
+	<script>
+		window.onload=window.onresize=function(){
+			document.documentElement.style.fontSize=20*document.documentElement.clientWidth/320+'px';
+		};
+	</script>
+</head>
+<body>
+	<div class="box">
+		<header>
+			<a href="javascript:;" class="left"><img src="images/guokr-rem_03.gif"></a>
+			<h3>Goukr.com</h3>
+			<a href="javascript:;" class="right"><img src="images/guokr-rem_05.gif"></a>
+		</header>
+		<nav>
+			<a href="javascript:;" class="left">用户登录</a>
+			<a href="javascript:;" class="right">用户注册</a>
+		</nav>
+		<div class="section_box">
+			<div class="img">
+				<img src="images/guokr-rem_16.jpg">
+				<p>紫荆城的石头是怎样运过来的</p>
+			</div>
+			<ul class="section">
+				<li><a href="javascript:;">解读科学观点时，你应该知道的的事</a></li>
+				<li><a href="javascript:;">运动出点汗，更好来判断</a></li>
+				<li><a href="javascript:;">“关掉”旧习惯，本性不在难移</a></li>
+				<li><a href="javascript:;">男女搭配，破案不累</a></li>
+				<li><a href="javascript:;">腰窝，性感无误？</a></li>
+				<li><a href="javascript:;">有七千多种语言，有七千多个“平行”</a></li>
+				<li><a href="javascript:;">久坐杀精--今天，你坐多久了？</a></li>
+			</ul>
+		</div>
+		<div class="section_box">
+			<div class="title_box">
+				<p class="min_title">热门问答</p>
+			</div>
+			<ul class="min_nav clearFix">
+				<li class="active">科技</li>
+				<li>生活</li>
+				<li>人文</li>
+				<li>自然</li>
+			</ul>
+			<ul  class="section">
+				<li>
+					<a href="javascript:;"><p>如果把探测器撞到卫星上会怎样？</p></a>
+					<div class="li_img clearFix">
+						<img src="images/guokr-rem_23.gif" class="fl">
+						<span class="fr">撞上去的事情人类已经干过了。。深度撞击号（英语:Deep lmpact）是美国国家</span>
+					</div>
+					
+				</li>
+				<li>
+					<a href="javascript:;">这个肥皂放入牛奶的效果是谁做的</a>
+				</li>
+				<li>
+					<a href="javascript:;">制造出全画幅感光原件有什么意义意义</a>
+				</li>
+				<li>
+					<a href="javascript:;">磁场是运动的电厂吗？</a>
+				</li>
+				<li>
+					<a href="javascript:;">什么函数能描述你的人生？</a>
+				</li>
+			</ul>
+		</div>
+		<div class="section_box">
+			<div class="title_box">
+				<p class="min_title">热门问答</p>
+			</div>
+			<ul class="min_nav clearFix">
+				<li class="active">科技</li>
+				<li>生活</li>
+				<li>人文</li>
+				<li>自然</li>
+			</ul>
+			<ul  class="section">
+				<li>
+					<a href="javascript:;"><p>如果把探测器撞到卫星上会怎样？</p></a>
+					<div class="li_img clearFix">
+						<img src="images/guokr-rem_23.gif" class="fl">
+						<span class="fr">撞上去的事情人类已经干过了。。深度撞击号（英语:Deep lmpact）是美国国家</span>
+					</div>
+					
+				</li>
+				<li>
+					<a href="javascript:;">这个肥皂放入牛奶的效果是谁做的</a>
+				</li>
+				<li>
+					<a href="javascript:;">制造出全画幅感光原件有什么意义意义</a>
+				</li>
+				<li>
+					<a href="javascript:;">磁场是运动的电厂吗？</a>
+				</li>
+				<li>
+					<a href="javascript:;">什么函数能描述你的人生？</a>
+				</li>
+			</ul>
+			<a class="foot" href="javascript:;">回到顶部</a>
+		</div>
+		<footer>
+			<div>PC版</div>
+			<span></span>
+			<div>移动应用</div>
+		</footer>
+	</div>
+</body>
+</html>

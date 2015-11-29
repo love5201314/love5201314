@@ -1,0 +1,775 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>美丽说-首页</title>
+<style>
+*{ margin:0; padding:0; }
+body{ font-size:12px; font-family: Arial;}
+li{ list-style:none; }
+a{ text-decoration:none;}
+.clearFix:after{ content:''; clear:both; display:block; }
+img{ display:block;}
+
+.fl{ float:left;}
+.fr{ float:right;}
+
+.st{ width:1200px; margin:0 auto;}
+.d1{ background:#f5f5f5; border-bottom:1px solid #eee;}
+.d1 a{ padding:0 15px; line-height:18px; border-right:1px dotted #f00; color:#666;}
+.d1 ul{ margin:10px -1px 10px 0px;}
+.yc{ width:1200px; overflow:hidden;}
+.tb1{ background:url(images/d1.jpg) no-repeat; margin-left:19px;}
+.tb2{ background:url(images/d2.jpg) no-repeat; margin-left:18px;}
+.tb3{ background:url(images/d3.jpg) no-repeat; margin-left:14px;}
+.tb3 span{ margin-right:34px;}
+.tb5{ background:url(images/d5.jpg) no-repeat; margin-left:22px;}
+.tb6{ background:url(images/d6jpg) no-repeat; margin-left:18px;}
+h1{ background:url(images/logo.jpg) no-repeat; width:106px; height:36px; text-indent:-999999em; margin:15px 0;}
+.srk{ margin:17px 360px 17px 254px;}
+.sy{ background:#f69; padding-left:127px;}
+.sy a{ padding:13px 14px; font-size:14px; color:#FFF;}
+.sy a:hover{ background:#ee3578;}
+
+.zcd{ width:218px;; padding:1px 0 0 20px; border:1px sold #ccc;}
+.zcd ul{ width:198px; height:572px; overflow:hidden;}
+.zcd p{ background:url(images/lb1.jpg) no-repeat; margin:13px 0; font-size:16px; color:#ff6ca2; padding-left:23px; width:175px;}
+.zcd a{ font-size:12px; margin:0 14px 9px 0; color:#666;}
+.zcd li{ border-bottom:1px dotted #ccc;}
+
+.ts{ border:1px solid #ccc; width:960px;}
+.ts .img1{ width:760px; height:419px;}
+.tx{ padding-top:10px;}
+.cc{ border:1px solid #ccc; margin-left:10px; width:175; height:142px;}
+
+.haha{ overflow:hidden;}
+.eee{ width:1240px;}
+.rqdp{ background:url(images/tubiao.png) no-repeat 0 0; height:26px; width:1200px; margin:20px 0 7px; }
+.box{ border-top:1px solid #e6e6e6;}
+.box a{ font-size:12px; color:#666; line-height:18px;}
+.box li{ width:180px; margin-right:24px;}
+.box img{ margin:15px 24px 6px 0;}
+.box p{ font-size:16px; color:#f69; line-height:28px;}
+.box p span{ line-height:32px; font-size:12px;text-decoration:line-through; color:#999;}
+
+.se{ width:1200px;}
+.yf{ width:78px; height:22px; background:url(images/tubiao.png) no-repeat 0 -44px; margin:20px 0 10px; margin-right:10px;}
+.xs{ font-size:16px; color:#999; margin-top:23px; padding-left:9px; border-left:1px dotted #333;}
+.xd{ font-size:16px; color:#999; margin-top:23px; padding-left:9px;}
+.xs span{ color:#999;}
+
+.yf_t{ width:1200px;}
+.yf_l{ padding-top:15px; width:940px; border:1px solid #e6e6e6;}
+.yf_l img{ margin:5px 5px 0 0; float:left;}
+.yf_r{ width:238px; border-top:1px solid #e6e6e6; padding-left:20px;}
+.cl{ font-size:16px; color:#666; margin:20px 0 2px 0; float:left; width:169px;}
+.yf_r_h span{ font-size:12px; color:#999; margin-top:22px; float:right;}
+.yf_r_h div{ float:left; font-size:12px; border-bottom:1px dashed #999;}
+.img2{ border:1px solid #e6e6e6; margin:14px 12px 14px 0;}
+.p3{ width:140px; margin:14px 0 10px;}
+.yf_r_h .p2{ color:#999;}
+.yf_b{ width:940px; overflow:hidden;}
+.aa{ width:315px;}
+.bb{ font-size:16px; line-height:78px; color:#f69; width:50px; padding-left:12px;}
+.ccc{ font-size:12px; margin:0 10px 10px 0; color:#999;}
+.ddd{ margin-top:23px; width:248px; border-right:1px dashed #999;}
+.ee{ width:960px;}
+.ff{ width:116px; height:21px; background:url(images/tubiao.png) no-repeat 0 -200px; margin:20px 0 15px 0;}
+.gg{ font-size:14px; color:#999;}
+.hh{ padding:0 13px 0 17px; border-right:1px dashed #999; margin:20px 0 20px;}
+.ii{ width:200px; border:1px solid #ccc; padding:0 13px 0; margin-right:15px;}
+.k{ line-height:37px; font-size:14px; color:#333;}
+.kkk{ line-height:46px;color:#999;}
+.kkkk{ width:64px; height:20px; color:#fff; background:#f69; text-align:center; line-height:20px; margin-top:13px;}
+.ll{ width:1230px;}
+.db{ background:#f5f5f5; color:#666; font-size:12px; margin-top:20px; border:1px solid #ddd; padding-top:34px;}
+.mm{ width:241px; height:210px;}
+.mm i{ width:35px; height:35px; background:url(images/dh.jpg) no-repeat; margin:0 0 34px 0; float:left;}
+.p11{ font-size:16px;}
+.p22{ font-size:14px; padding:10px 0 10px 0;}
+.divv{ padding-right:56px;}
+.divv b{ font-size:16px; float:left; margin-bottom:12px;}
+.divv p{ line-height:26px;}
+.wx{ width:135px;}
+.wx b{ font-size:16px; padding-bottom:28px;}
+.lj a{ font-size:12px; color:#666; line-height:30px; margin-left:10px;}
+
+</style>
+</head>
+
+<body>
+	<div class="st clearFix">
+    	<div class="fl">
+            <div class="yc">
+                <div class="d1 clearFix">
+                    <ul class="fr clearFix">
+                        <li class="fl tb1"><a href="#">微信登陆</a></li>
+                        <li class="fl tb2"><a href="#">QQ登陆</a></li>
+                        <li class="fl"><a href="#">登陆</a></li>
+                        <li class="fl"><a href="#">注册</a></li>
+                        <li class="fl tb3"><a href="#"><span>我的购物车</span></a></li>
+                        <li class="fl tb5"><a href="#">我的订单</a></li>
+                        <li class="fl tb6"><a href="#">下载APP</a></li>
+                        <li class="fl"><a href="#">客户服务</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearFix">
+            	<h1 class="fl">美丽说</h1>
+                <img class="srk fl"src="images/logo2.jpg"/>
+            </div>
+            <div>
+            	<ul class="sy clearFix">
+                	<li class="clearFix fl"><a class="fl" href="#">首页</a></li>
+                    <li class="clearFix fl"><a class="fl" href="#">今日热播</a></li>
+                    <li class="clearFix fl"><a class="fl" href="#">衣服</a></li>
+                    <li class="clearFix fl"><a class="fl" href="#">符文页</a></li>
+                    <li class="clearFix fl"><a class="fl" href="#">首页</a></li>
+                    <li class="clearFix fl"><a class="fl" href="#">今日热播</a></li>
+                    <li class="clearFix fl"><a class="fl" href="#">衣服</a></li>
+                    <li class="clearFix fl"><a class="fl" href="#">符文页</a></li>
+                    <li class="clearFix fl"><a class="fl" href="#">首页</a></li>
+                    <li class="clearFix fl"><a class="fl" href="#">今日热播</a></li>
+                    <li class="clearFix fl"><a class="fl" href="#">衣服</a></li>
+                    <li class="clearFix fl"><a class="fl" href="#">符文页</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="zcd fl">
+        	<ul>
+            	<li class="clearFix">
+                	<p class="fl">傻帽</p>
+                    <span><a class="fl"href="#">铁蛋</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">于寡妇</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">村头挂羊头卖狗肉</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">隔壁老王</a></span>
+                </li>
+            	<li class="clearFix">
+                	<p class="fl">傻帽</p>
+                    <span><a class="fl"href="#">铁蛋</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">于寡妇</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">村头挂羊头卖狗肉</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">隔壁老王</a></span>
+                </li>
+            	<li class="clearFix">
+                	<p class="fl">傻帽</p>
+                    <span><a class="fl"href="#">铁蛋</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">于寡妇</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">村头挂羊头卖狗肉</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">隔壁老王</a></span>
+                </li>
+                <li class="clearFix">
+                	<p class="fl">傻帽</p>
+                    <span><a class="fl"href="#">铁蛋</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">于寡妇</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">村头挂羊头卖狗肉</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">隔壁老王</a></span>
+                </li>
+                <li class="clearFix">
+                	<p class="fl">傻帽</p>
+                    <span><a class="fl"href="#">铁蛋</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">于寡妇</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">村头挂羊头卖狗肉</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">铁蛋</a><a class="fl"href="#">二狗子</a><a class="fl"href="#">隔壁老王</a></span>
+                </li>
+            </ul> 
+        </div>
+
+        <div class="fl">
+        	<div class="ts clearFix">
+            	<img class="fl img1" src="images/t1.jpg" alr""/>
+                <img class="fl" src="images/t2.jpg" alr""/>
+                <img class="fl" src="images/t2.jpg" alr""/>
+                <img class="fl" src="images/t2.jpg" alr""/>
+            </div>
+            <div class="tx clearFix">
+            	<img class="fl cc" src="images/tx1.jpg" alr""/>
+                <img class="fl cc" src="images/tx1.jpg" alr""/>
+                <img class="fl cc" src="images/tx1.jpg" alr""/>
+                <img class="fl cc" src="images/tx1.jpg" alr""/>
+                <img class="fr cc" src="images/t2.jpg" alr""/>
+            </div>
+        </div>
+        
+        <div class="st clearFix haha fl">
+            <div class="fl eee">
+                <div class="rqdp"></div>
+                <ul class="box clearFix">
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                 
+                </ul>
+            </div>
+        </div>
+        <div class="st clearFix haha fl">
+            <div class="fl eee">
+                <div class="rqdp"></div>
+                <ul class="box clearFix">
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>
+                    <li class="fl">
+                    	<img src="images/shang1.jpg" art=""/>
+                        <a href="#">瘦身针织麻辣烫哈哈哈哈哈哈哈哈哈哈哈哈</a>
+                        <p>¥99<span>¥998</span></p>
+                    </li>  
+                </ul>
+                <img src="images/gg.jpg" alt""/>
+            </div>
+        </div>
+        <div class="fl">
+            <div>
+                <div class="clearFix se">
+                    <div class="yf fl"></div>
+                    <p class="xs fl">今日心伤<span>3968</span>件</p>
+                    <p class="xd fr">查看所有></p>
+                </div>
+                <div class="yf_t clearFix">
+                    <div class="yf_l clearFix fl">
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                    </div>
+                    <div class="yf_r fr clearFix">
+                        <div class="yf_r_h clearFix">
+                            <p class="cl">最好衣服店</p>
+                            <span>更多好店></span>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="yf_b fl clearFix">
+                        <div class="ee">
+                            <div class="aa clearFix fl">
+                                <div class="bb fl">上衣</div>
+                                <div class="clearFix fr ddd">
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                </div>
+                            </div>
+                            <div class="aa clearFix fl">
+                                <div class="bb fl">上衣</div>
+                                <div class="clearFix fr ddd">
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                </div>
+                            </div>
+                            <div class="aa clearFix fl">
+                                <div class="bb fl">上衣</div>
+                                <div class="clearFix fr ddd">
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="clearFix se">
+                    <div class="yf fl"></div>
+                    <p class="xs fl">今日心伤<span>3968</span>件</p>
+                    <p class="xd fr">查看所有></p>
+                </div>
+                <div class="yf_t clearFix">
+                    <div class="yf_l clearFix fl">
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                    </div>
+                    <div class="yf_r fr clearFix">
+                        <div class="yf_r_h clearFix">
+                            <p class="cl">最好衣服店</p>
+                            <span>更多好店></span>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="yf_b fl clearFix">
+                        <div class="ee">
+                            <div class="aa clearFix fl">
+                                <div class="bb fl">上衣</div>
+                                <div class="clearFix fr ddd">
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                </div>
+                            </div>
+                            <div class="aa clearFix fl">
+                                <div class="bb fl">上衣</div>
+                                <div class="clearFix fr ddd">
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                </div>
+                            </div>
+                            <div class="aa clearFix fl">
+                                <div class="bb fl">上衣</div>
+                                <div class="clearFix fr ddd">
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="clearFix se">
+                    <div class="yf fl"></div>
+                    <p class="xs fl">今日心伤<span>3968</span>件</p>
+                    <p class="xd fr">查看所有></p>
+                </div>
+                <div class="yf_t clearFix">
+                    <div class="yf_l clearFix fl">
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                            <img src="images/yf111.jpg" alt""/>
+                    </div>
+                    <div class="yf_r fr clearFix">
+                        <div class="yf_r_h clearFix">
+                            <p class="cl">最好衣服店</p>
+                            <span>更多好店></span>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div>
+                            <div class="fl clearFix">
+                                <img  class="img2 fl"src="images/yjdyc.jpg" alt""/>
+                                <p class="fl p3">妖精的衣橱</p>
+                                <p class="p2 fl">多少多少件商品</p>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="yf_b fl clearFix">
+                        <div class="ee">
+                            <div class="aa clearFix fl">
+                                <div class="bb fl">上衣</div>
+                                <div class="clearFix fr ddd">
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                </div>
+                            </div>
+                            <div class="aa clearFix fl">
+                                <div class="bb fl">上衣</div>
+                                <div class="clearFix fr ddd">
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                </div>
+                            </div>
+                            <div class="aa clearFix fl">
+                                <div class="bb fl">上衣</div>
+                                <div class="clearFix fr ddd">
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                    <a  class="fl ccc" herf="#">背心</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fl clearFix st">
+        	<div class="ff fl"></div>
+            <div class="fr clearFix">
+            	<span class="hh fl"><a class="gg" href="">欧美</a></span>
+                <span class="hh fl"><a class="gg" href="">欧美</a></span>
+                <span class="hh fl"><a class="gg" href="">欧美</a></span>
+                <span class="hh fl"><a class="gg" href="">欧美</a></span>
+                <span class="hh fl"><a class="gg" href="">欧美</a></span>
+                <span class="hh fl"><a class="gg" href="">欧美</a></span>
+                <span class="hh fl"><a class="gg" href="">更多杂志 ></a></span>
+            </div>
+            <div class="st clearFix fl">
+                <div class="ll">
+                    <div class="ii fl">
+                        <b class="k fl">小女人有恋物癖</b>
+                        <img class="kk fl" src="images/aaaaaaaa.jpg"/>
+                        <p class="kkk fl">886各分项</p>
+                        <p class="kkkk fr">去看看</p>
+                    </div>
+                    <div class="ii fl">
+                        <b class="k fl">小女人有恋物癖</b>
+                        <img class="kk fl" src="images/aaaaaaaa.jpg"/>
+                        <p class="kkk fl">886各分项</p>
+                        <p class="kkkk fr">去看看</p>
+                    </div>
+                    <div class="ii fl">
+                        <b class="k fl">小女人有恋物癖</b>
+                        <img class="kk fl" src="images/aaaaaaaa.jpg"/>
+                        <p class="kkk fl">886各分项</p>
+                        <p class="kkkk fr">去看看</p>
+                    </div>
+                    <div class="ii fl">
+                        <b class="k fl">小女人有恋物癖</b>
+                        <img class="kk fl" src="images/aaaaaaaa.jpg"/>
+                        <p class="kkk fl">886各分项</p>
+                        <p class="kkkk fr">去看看</p>
+                    </div>
+                    <div class="ii fl">
+                        <b class="k fl">小女人有恋物癖</b>
+                        <img class="kk fl" src="images/aaaaaaaa.jpg"/>
+                        <p class="kkk fl">886各分项</p>
+                        <p class="kkkk fr">去看看</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="db fl st clearFix">
+        	<div class="mm fl">
+            	<i></i>
+                <p class="p11">400-800-577</p>
+                <p class="p22">美丽说客服热线</p>
+                <p class="p33">周一到周五：08:00-22:00</p>
+            </div>
+            <div class="divv fl">
+            	<b>用户帮助</b>
+                <p>新手指南</p>
+                <p>网站地图</p>
+                <p>意见反馈</p>
+            </div>
+            <div class="divv fl">
+            	<b>用户帮助</b>
+                <p>新手指南</p>
+                <p>网站地图</p>
+                <p>意见反馈</p>
+                <p>网站地图</p>
+                <p>意见反馈</p>
+            </div>
+            <div class="divv fl">
+            	<b>用户帮助</b>
+                <p>新手指南</p>
+                <p>网站地图</p>
+                <p>意见反馈</p>
+            </div>
+        	<div class="wx fl clearFix">
+            	<b class="fl">美丽说微信服务号</b>
+                <img class="fl" src="images/wx.jpg" alt=""/>
+            </div>
+            <div class="wx fr clearFix">
+            	<b class="fl">美丽说微信服务号</b>
+                <img class="fl" src="images/wx2.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="lj fl clearFix st">
+        <a href="#">友情链接：</a>
+        <a href="#">腾讯女性</a>
+        <a href="#">列表网</a>
+        <a href="#">太平洋女性网</a>
+        <a href="#">啦啦啦德玛西亚哈哈</a>
+        <a href="#">腾讯女性</a>
+        <a href="#">列表网</a>
+        <a href="#">太平洋女性网</a>
+        <a href="#">啦啦啦德玛西亚哈哈</a>
+        <a href="#">腾讯女性</a>
+        <a href="#">列表网</a>
+        <a href="#">腾讯女性</a>
+        <a class="fr" href="#">更多>></a>
+        </div>
+        <img src="images/dibian1.jpg"/>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

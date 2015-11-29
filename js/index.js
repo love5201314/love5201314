@@ -10,7 +10,17 @@ window.onload=window.onscroll=window.onresize=function(){
 	//导航动画
 	var oNav=document.querySelector('header');
 	oNav.style.top=0;
+	//首页动画
+	var oN_l=document.querySelector('.left');
+	var oN_r=document.querySelector('.right');
+	
+	oN_l.style.left=0;
+	oN_r.style.right=0;
+
+
+
 	btn();
+
 	//翻页效果
 	addWheel(document,function(down){
 		if(bFlag)return;

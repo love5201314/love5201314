@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com">
+<meta name="copyright" content="智能社 - zhinengshe.com">
+<title>智能社 - www.zhinengshe.com</title>
+<style>
+* { margin:0; padding:0; }
+.box { position:relative; width:700px; height:400px; margin:100px auto; }
+span { position:absolute; background:url(images/1.jpg); opacity:0; }
+input { position:absolute; left:100px; top:50px; width:100px; height:40px; }
+</style>
+<script src="move.js"></script>
+<script>
+window.onload=function (){
+	var oBox=document.getElementById('box');
+	var oBtn=document.getElementById('btn');
+	var oImg=document.getElementById('img1');
+	var bFlag=false;
+	var now=0;
+	var aSpan=[];
+	var aPath=['c.jpg', 'b.jpg', 'a.jpg'];
+	var row=4;
+	var col=7;
+	
+	var W=700/col;
+	var H=400/row;
+
+	for(var r=0; r<row; r++)
+	{
+		for (var c=0; c<col; c++)
+		{
+			var oSpan=document.createElement('span');
+			var left=c*W;
+			var top=r*H;
+			oSpan.style.left=left+'px';
+			oSpan.style.top=top+'px';
+			oSpan.style.width=W+'px';
+			oSpan.style.height=H+'px';
+			
+			oSpan.style.backgroundPosition=-left+'px -'+top+'px';
+			
+			oBox.appendChild(oSpan);
+			aSpan.push(oSpan);
+		}
+	}
+	
+	// 点击
+	oBtn.onclick=function (){
+		if (bFlag)
+		{
+			return false;
+		}
+		
+		now++;
+		bFlag=true;
+		
+		// span
+		for (var i=0; i<aSpan.length; i++)
+		{
+			aSpan[i].style.opacity=0;
+			aSpan[i].style.backgroundImage
+			='url(images/'+aPath[now%aPath.length]+')';
+		}
+		
+		var n=0;
+		var timer=setInterval(function (){
+			(function (index){
+				move(aSpan[n], {opacity:1}, {
+					complete:function (){
+						if (index == aSpan.length-1)
+						{
+							// 最后一个运动完了
+							oImg.src
+							='images/'+aPath[now%aPath.length];
+							bFlag=false;
+						}
+					}	
+				});
+			})(n);
+			
+			n++;
+			if (n == aSpan.length)
+			{
+				clearInterval(timer);
+			}
+		}, 200);
+	};
+};
+</script>
+</head>
+
+<body>
+	<input type="button" value="go" id="btn" />
+	<div class="box" id="box">
+		<img src="images/c.jpg" id="img1" />
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

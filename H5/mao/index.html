@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<style>
+		*{ margin:0; padding:0; list-style:none; }
+		a{ text-decoration:none; color:#333; }
+		img{ display:block; }
+		.clearFix:after{ content:''; clear:both; display:block;}
+		.fl{ float:left; display:inline;}
+		.fr{ float:right; display:inline;}
+
+		html{ font-size:20px; }
+
+		.box{ width:100%; }
+		header{ width:100%;  }
+		header .loog { width:100%; height: 2.5rem;}
+		header .loog_box{ background:-webkit-linear-gradient(#fff,#ebebeb); width:100%;} 
+		header .loog .btn{ display:inline-block; background:url(images/btn.png) no-repeat; width:3.175rem; height:1.55rem; background-size:3.175rem 1.55rem; margin-top:0.475rem; float:left; margin-left:0.75rem;}
+		header .loog img{ width:3.7rem; display: inline-block; margin-left:2.475rem; float:left; margin-top:0.75rem;}
+		header .tab{ width:100%; overflow:hidden;}
+		header .tab ul{ width:80rem; }
+		header .tab ul li a img{ width:16rem; }
+		header .tab .btn{ width:2.5rem; margin:0 auto; margin-top:0.525rem;}
+		header .tab .btn span{ width:0.25rem; height:0.25rem; background:#a9a9a9; border-radius:50%; margin:0 0.125rem;}
+		header .tab .btn span.active{ background:#ff4300; }
+
+		nav{ width:100%;}
+		nav a{ width:25%; height:4rem; display:inline-block; float:left; text-align: center; font-size:0.6rem; color:#999; padding:0.5rem 0;}
+		nav a span{ width:2rem; height:2rem; border-radius:50%; display:inline-block; margin-top:0.525rem;}
+		nav a p{ line-height:1.5rem; }
+		nav a:nth-child(1) span{ background:url(images/1.png)no-repeat center #ff3900; background-size:0.8rem;}
+		nav a:nth-child(2) span{ background:url(images/2.png)no-repeat center #8bca11; background-size:0.95rem;}
+		nav a:nth-child(3) span{ background:url(images/3.png)no-repeat center #000; background-size:0.9rem;}
+		nav a:nth-child(4) span{ background:url(images/4.png)no-repeat center #ff529d; background-size:0.8rem;}
+		nav a:nth-child(5) span{ background:url(images/5.png)no-repeat center #cfa871; }
+		nav a:nth-child(6) span{ background:url(images/6.png)no-repeat center #ffb021; background-size:0.8rem;}
+		nav a:nth-child(7) span{ background:url(images/7.png)no-repeat center #2dc814; background-size:0.578rem;}
+		nav a:nth-child(8) span{ background:url(images/8.png)no-repeat center #f5493c; background-size:0.6rem;}
+		
+		.box_sub{ padding:0 0.5rem;}
+		.minbt{ width:100%; height:1.9rem; border-bottom:0.1rem solid #dcdcdc; -webkit-box-align:center; display:-webkit-box; font-size:0.75rem; position:relative;}
+		.minbt .l{ border-left: 0.1rem solid #d51938;}
+		.minbt .r{ position:absolute; right:0; top:0.52rem;}
+		.com{ width:100%; margin-top:0.775rem;}
+		.com .nav_sub{ width:100%; height:3rem; background:#f4f4f4; margin-bottom:0.5rem;}
+		.com .nav_sub a{ display:block; height:100%; display:-webkit-box; -webkit-box-align:center; position:relative;}
+		.com .nav_sub .dig{ height:100%; width:1.5rem; display:inline-block; text-align:center;line-height:3rem; background:#e00202; color:#fff; font-weight:bold;}
+		.com .nav_sub img{ height:100%}
+		.com .nav_sub .pirce{ height:1.5rem; font-size:0.6rem; margin-left:0.55rem;}
+		.com .pirce2{ font-size:0.8rem; color:#c7223d; unicode-bidi:bidi-override; background: url(images/22.png) no-repeat right;padding-right:0.8rem; background-size:0.35rem; position:absolute; right:0.5rem; top:1rem;}
+		.com .nav_sub .pirce div{ display:-webkit-box; -webkit-box-align:center;}
+		.com .nav_sub .pirce p{ line-height:0.9rem;}
+		.com .nav_sub .pirce div p span{color:#c7223d;}
+		
+		
+		.min_nav{ height:2rem; color:#666; background:#f5f5f5; text-align:center; width:100%; line-height:2rem;font-size:0.7rem; margin-bottom:0.5rem; }
+		.con{margin-bottom:0.5rem;}
+		.con img{ width:3.75rem; }
+		.con a{ float:left; width:3.75rem; height:2.175rem; border:1px solid #eee; margin-right:-2px; text-align:center; line-height:2.175rem;}
+		.ccc{ display:-webkit-box; margin-bottom:0.5rem;}
+		.ccc div{ -webkit-box-flex:1; height:1.25rem; padding-top:2.75rem; text-align:center; font-size:0.6rem;}
+		.ccc div:nth-child(1){ background: url(images/tb1.png) no-repeat center 0.8rem #38a4f1;}
+		.ccc div:nth-child(2){ background: url(images/tb2.png) no-repeat center 0.8rem #8bca11;}
+		.ccc div:nth-child(3){ background: url(images/tb3.png) no-repeat center 0.8rem #ff7404;}
+		footer .land{ animation-duration: 0.7rem; line-height:2.2rem; height:2.2rem; padding:0 0.7rem; background:#f8f8f8;}
+		footer .land a{ float:left;}
+		footer .land a:nth-child(3){ float:right; padding-right:0.9rem; background:url(images/441.png) no-repeat right}
+		.switch{ width:100%; height:8.6rem; background:#eee;}
+		.switch div{ display:-webkit-box; -webkit-box-pack:center;}
+		.switch div a{ display:block; margin:0 0.75rem; line-height:2.5rem; font-size:0.65rem;}
+		.switch p{display:-webkit-box; -webkit-box-pack:center;font-size:0.55rem;color:#ccc;}
+		.switch img{ width:13rem; margin:0.65rem auto;}
+		.foot{ background:url(images/foot.png) no-repeat;background-size:100%; display:-webkit-box; width:100%; height:2.2rem;}
+		.foot a{ display:block; -webkit-box-flex:1;}
+	</style>
+	<script>
+		;(function(win,doc){
+			function change(){
+				document.documentElement.style.fontSize=document.documentElement.clientWidth/16+'px';	
+			}
+			doc.addEventListener('DOMContentLoaded',change,false);	
+			win.addEventListener('resize',change,false);
+		})(window,document);
+	</script>
+</head>
+<body>
+	<div class="box">
+		<header>
+			<div class="loog_box">
+				<div class="loog clearFix">
+					<a href="javascript:;" class="btn"></a>
+					<img src="images/loog.png">
+				</div>
+			</div>
+			
+			<div class="tab">
+				<ul class="clearFix">
+					<li class="fl"><a href=javascript:;""><img src="images/nav.jpg"></a></li>
+					<li class="fl"><a href=javascript:;""><img src="images/nav.jpg"></a></li>
+					<li class="fl"><a href=javascript:;""><img src="images/nav.jpg"></a></li>
+					<li class="fl"><a href=javascript:;""><img src="images/nav.jpg"></a></li>
+					<li class="fl"><a href=javascript:;""><img src="images/nav.jpg"></a></li>
+				</ul>
+				<div class="btn clearFix">
+					<span class="fl active"></span>
+					<span class="fl"></span>
+					<span class="fl"></span>
+					<span class="fl"></span>
+					<span class="fl"></span>
+				</div>
+			</div>
+		</header>
+		<nav class="clearFix">
+			<a href="javascript:;">
+				<span></span>
+				<p>商品</p>
+			</a>
+			<a href="javascript:;">
+				<span></span>
+				<p>生活</p>
+			</a>
+			<a href="javascript:;">
+				<span></span>
+				<p>品牌</p>
+			</a>
+			<a href="javascript:;">
+				<span></span>
+				<p>聚宝盆</p>
+			</a>
+			<a href="javascript:;">
+				<span></span>
+				<p>聚名品</p>
+			</a>
+			<a href="javascript:;">
+				<span></span>
+				<p>聚家装</p>
+			</a>
+			<a href="javascript:;">
+				<span></span>
+				<p>聚透</p>
+			</a>
+			<a href="javascript:;">
+				<span></span>
+				<p>客户端</p>
+			</a>
+		</nav>
+		<div class="box_sub">
+			<div class="minbt clearFix">
+				<p class="l">聚划算热卖排行</p>
+				<p class="r">TOP10</p>
+			</div>
+			<ul class="com">
+				<li class="nav_sub">
+					<a href="javascript:;">
+						<span class="dig">1</span>
+						<img src="images/com.png">
+						<div class="pirce">
+							<p>已售68423</p>
+							<div>
+								<p><span>2.3</span>折&nbsp</p>
+								<p>￥299</p>
+							</div>
+						</div>
+						<div class="pirce2">￥51</div>
+					</a>
+				</li>
+				<li class="nav_sub">
+					<a href="javascript:;">
+						<span class="dig">2</span>
+						<img src="images/com.png">
+						<div class="pirce">
+							<p>已售68423</p>
+							<div>
+								<p><span>2.3</span>折&nbsp</p>
+								<p>￥299</p>
+							</div>
+						</div>
+						<div class="pirce2">￥51</div>
+					</a>
+				</li>
+				<li class="nav_sub">
+					<a href="javascript:;">
+						<span class="dig">3</span>
+						<img src="images/com.png">
+						<div class="pirce">
+							<p>已售68423</p>
+							<div>
+								<p><span>2.3</span>折&nbsp</p>
+								<p>￥299</p>
+							</div>
+						</div>
+						<div class="pirce2">￥51</div>
+					</a>
+				</li>
+				<li class="nav_sub">
+					<a href="javascript:;">
+						<span class="dig">4</span>
+						<img src="images/com.png">
+						<div class="pirce">
+							<p>已售68423</p>
+							<div>
+								<p><span>2.3</span>折&nbsp</p>
+								<p>￥299</p>
+							</div>
+						</div>
+						<div class="pirce2">￥51</div>
+					</a>
+				</li>
+				<li class="nav_sub">
+					<a href="javascript:;">
+						<span class="dig">5</span>
+						<img src="images/com.png">
+						<div class="pirce">
+							<p>已售68423</p>
+							<div>
+								<p><span>2.3</span>折&nbsp</p>
+								<p>￥299</p>
+							</div>
+						</div>
+						<div class="pirce2">￥51</div>
+					</a>
+				</li>
+				<li class="nav_sub">
+					<a href="javascript:;">
+						<span class="dig">6</span>
+						<img src="images/com.png">
+						<div class="pirce">
+							<p>已售68423</p>
+							<div>
+								<p><span>2.3</span>折&nbsp</p>
+								<p>￥299</p>
+							</div>
+						</div>
+						<div class="pirce2">￥51</div>
+					</a>
+				</li>
+				<li class="nav_sub">
+					<a href="javascript:;">
+						<span class="dig">7</span>
+						<img src="images/com.png">
+						<div class="pirce">
+							<p>已售68423</p>
+							<div>
+								<p><span>2.3</span>折&nbsp</p>
+								<p>￥299</p>
+							</div>
+						</div>
+						<div class="pirce2">￥51</div>
+					</a>
+				</li>
+				<li class="nav_sub">
+					<a href="javascript:;">
+						<span class="dig">8</span>
+						<img src="images/com.png">
+						<div class="pirce">
+							<p>已售68423</p>
+							<div>
+								<p><span>2.3</span>折&nbsp</p>
+								<p>￥299</p>
+							</div>
+						</div>
+						<div class="pirce2">￥51</div>
+					</a>
+				</li>
+				<li class="nav_sub">
+					<a href="javascript:;">
+						<span class="dig">9</span>
+						<img src="images/com.png">
+						<div class="pirce">
+							<p>已售68423</p>
+							<div>
+								<p><span>2.3</span>折&nbsp</p>
+								<p>￥299</p>
+							</div>
+						</div>
+						<div class="pirce2">￥51</div>
+					</a>
+				</li>
+				<li class="nav_sub">
+					<a href="javascript:;">
+						<span class="dig">10</span>
+						<img src="images/com.png">
+						<div class="pirce">
+							<p>已售68423</p>
+							<div>
+								<p><span>2.3</span>折&nbsp</p>
+								<p>￥299</p>
+							</div>
+						</div>
+						<div class="pirce2">￥51</div>
+					</a>
+				</li>
+			</ul>
+			<p class="min_nav">更多划算&nbsp逛起来！</p>
+			<div class="con clearFix">
+				<img src="images/a1.png" class="fl">
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+			</div>
+			<p class="min_nav">更多划算&nbsp逛起来！</p>
+			<div class="con clearFix">
+				<img src="images/a2.png" class="fl">
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+			</div>
+			<p class="min_nav">更多划算&nbsp逛起来！</p>
+			<div class="con clearFix">
+				<img src="images/a3.png" class="fl">
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+				<a href="javascript:;">服饰</a>
+			</div>
+			<div class="ccc">
+				<div>IOS客户端</div>
+				<div>安卓客户端</div>
+				<div>意见反馈</div>
+			</div>
+		</div>
+		<footer>
+			<div class="land clearFix">
+				<a href="javascript:;">登陆</a>
+				<a href="javascript:;">注册</a>
+				<a href="javascript:;">TOP</a>
+			</div>
+			<div class="switch">
+				<div>
+					<a href="javascript:;">标准版</a>
+					<a href="javascript:;">电脑板</a>
+				</div>
+				<p>@2013 浙B2-20080224  服务中心</p>
+				<img src="images/nnn.png">
+			</div>
+			<div class="foot">
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
+
+
+

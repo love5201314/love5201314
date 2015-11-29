@@ -14,6 +14,6 @@ img{ display:block;}
 .clearFix{zoom:1;}
 .fl{ float:left; dispiay:inline;}
 .fr{ float:right; dispiay:inline;}
-body{ background:#f2f2f2;}
+body{ font-family:'微软雅黑'; }
 
 

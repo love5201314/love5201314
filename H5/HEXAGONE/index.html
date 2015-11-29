@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	<title>HEXAGONE</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<style>
+		*{ margin:0; padding:0; list-style:none; }
+		a{ text-decoration:none; color:#333; }
+		.clearFix:after{ content:''; clear:both; display:block;}
+		.fl{ float:left; display:inline;}
+		.fr{ float:right; display:inline;}
+
+		html{ font-size:20px; }
+		
+		.da{ width:100%;}
+		header{ width:100%; height:3.05rem; display:-webkit-box; background:#344a61;}
+		header p{-webkit-box-flex:1; text-align:center; line-height:3.05rem; color:#fff; font-size:0.7rem;}
+		header a:nth-child(1){ width:3.05rem; height:100%; border-right:2px solid #435970; display:inline-block; background:url(img/2.png) no-repeat center; background-size:0.9rem;}
+		header a:nth-child(3){ width:3.05rem; height:100%; border-left:2px solid #435970; display:inline-block; background:url(img/1.png) no-repeat center; background-size:0.9rem;}
+		.box{ padding:0 1rem; overflow:hidden;}
+		.box h4{ height:2.1rem; color:#c4c4c4; border-bottom:0.1rem solid #c4c4c4;font-size:0.5rem; line-height:2.1rem; margin-bottom:1rem;}
+		.nav{ position:relative;}
+		.nav div{ width:1.4rem; height:1.4rem; border-radius:50%; text-align:center; line-height:1.4rem; color:#fff; font-size:0.7rem; background:#000;}
+		.nav div:nth-child(1){ position:absolute; left:1.0rem; bottom:4rem; border:0.05rem solid #f69;}
+		.nav div:nth-child(2){ position:absolute; right:1.0rem; bottom:4rem; border:0.05rem solid #f69;}
+		.nav ul li img{ width:100%;}
+		.nav ul li p{ width:100%; text-align:center; position:absolute; left:0; bottom:0; height:1.7rem; line-height:1.7rem; background:-webkit-linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.8)); color:#fff;	}
+		.xx{ margin-bottom:1.0rem; border-top:0.05rem solid #e5e5e5;}
+		.xx h5{ width:100%; height:2.75rem; line-height:2.75rem; font-weight:bold; font-size:0.7rem;}
+		.xx p{ width:100%; line-height:0.9rem; font-size:0.5rem;}
+		.zz {margin-bottom:1.0rem; display:-webkit-box; -webkit-box-pack:center;}
+		.zz img{ width:4rem; height:4rem;}
+		.zz div{ margin-left:1.0rem; }
+		.zz div h5{font-size:0.7rem; line-height:1.0rem;}
+		.zz div p{ font-size:0.5rem;line-height:0.9rem; width:9.0rem;}
+		.img{ width:17.0rem;}
+		.img img{ width:3.95rem; margin-right:1.0rem; margin-bottom:1.0rem; float:left;}
+		.ss{ margin-bottom:1.0rem; border-top:0.05rem solid #e5e5e5; text-align:center;}
+		.ss h5{ width:100%; height:2.75rem; line-height:2.75rem; font-weight:bold; font-size:0.7rem;}
+		.ss p{ width:100%; line-height:0.9rem; font-size:0.5rem;}
+		.img1{ text-align:center; margin-bottom:1rem;}
+		.img1 img{ width:2.5rem; height:2.5rem; margin:0.5rem;}
+		.foot{ text-align:center; margin-bottom:1rem;}
+		.foot p{line-height:0.9rem; font-size:0.5rem; color:#8d8d8d;}
+		footer{ height:3rem; width:100%; text-align:center; background:#000;}
+		footer img{ -webkit-box-flex:1; width:1rem; margin-top:0.5rem;}
+		footer p{ font-size:0.375rem; color:#8f8f8f; line-height:1.1rem;}
+	</style>
+	<script>
+		;(function(win,doc){
+			function change(){
+				document.documentElement.style.fontSize=document.documentElement.clientWidth/16+'px';	
+			}
+			doc.addEventListener('DOMContentLoaded',change,false);	
+			win.addEventListener('resize',change,false);
+		})(window,document);
+	</script>
+	</head>
+	<body>
+		<div class="da">
+			<header>
+				<a href="javascript:;"></a>
+				<p>HEXAGONE</p>
+				<a href="javascript:;"></a>
+			</header>
+			<div class="box">
+				<h4>HOMEPAGE</h4>
+				<div class="nav">
+					<div><</div>
+					<div>></div>
+					<ul>
+						<li>
+							<img src="img/3.png">
+							<p>A samll caption</p>
+						</li>
+						<li>
+							<img>
+							<p></p>
+						</li>
+					</ul>
+				</div>
+				<div class="xx">
+					<h5>My View on Driving</h5>
+					<p>Traffic jams are very commonly-seen in big cities, and a big headache for the citizens. In rush hours, endless cars get stuck on the road and the whole city is like a huge parking lot. </p>
+				</div>
+				<div class="zz">
+					<img src="img/4.png">
+					<div>
+						<h5>The Significance</h5>
+						<p>People are producing waste every day, which is a huge which is a huge</p>
+					</div>
+				</div>
+				<div class="zz">
+					<img src="img/4.png">
+					<div>
+						<h5>The Significance</h5>
+						<p>People are producing waste every day, which is a huge which is a huge</p>
+					</div>
+				</div>
+				<div class="xx">
+					<h5>My View on Driving</h5>
+					<p>Traffic jams are very commonly-seen in big cities, and a big headache for the citizens.</p>
+				</div>
+				<div class="img clearFix">
+					<img src="img/5.png">
+					<img src="img/5.png">
+					<img src="img/5.png">
+					<img src="img/5.png">
+					<img src="img/5.png">
+					<img src="img/5.png">
+				</div>
+				<div class="xx">
+					<h5>My View on Driving</h5>
+					<p>Traffic jams are very commonly-seen in big cities, and a big headache for the citizens. In rush hours, endless cars get stuck on the road and the whole city is like a huge parking lot. </p>
+				</div>
+				<div class="zz">
+					<img src="img/6.png">
+					<div>
+						<h5>The Significance</h5>
+						<p>People are producing waste every day, which is a huge which is a huge</p>
+					</div>
+				</div>
+				<div class="ss">
+					<h5>My View on Driving</h5>
+					<p>Traffic jams are very commonly-seen in big cities, and a big headache for the citizens. In rush hours, endless cars get stuck </p>
+				</div>
+				<div class="img1">
+					<img src="img/7.png">
+					<img src="img/7.png">
+					<img src="img/7.png">
+				</div>
+				<div class="foot">
+					<p>Traffic jams are very commonly-seen in big cities, and a big headache for the citizens. In rush hours, endless cars get stuck </p>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<img src="img/9.png">
+			<img src="img/9.png">
+			<img src="img/9.png">
+			<img src="img/9.png">
+			<img src="img/9.png">
+			<img src="img/9.png">
+			<img src="img/9.png">
+			<img src="img/9.png">
+			<img src="img/9.png">
+			<p>Traffic jams are very commonly-seen</p>
+		</footer>
+	</body>
+</html>
