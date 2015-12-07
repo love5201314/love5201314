@@ -4,12 +4,13 @@
 <meta charset="utf-8">
 <meta name="author" content="智能社 - zhinengshe.com">
 <meta name="copyright" content="智能社 - zhinengshe.com">
-<title>智能社 - www.zhinengshe.com</title>
+<title>分块运动</title>
 <style>
 * { margin:0; padding:0; }
 .box { position:relative; width:700px; height:400px; margin:100px auto; }
-span { position:absolute; background:url(images/1.jpg); opacity:0; }
+span { position:absolute; background:url(images/1.jpg); opacity:0; background-size: 700px;}
 input { position:absolute; left:100px; top:50px; width:100px; height:40px; }
+img{ width:700px; }
 </style>
 <script src="move.js"></script>
 <script>
@@ -25,7 +26,7 @@ window.onload=function (){
 	var col=7;
 	
 	var W=700/col;
-	var H=400/row;
+	var H=437/row;
 
 	for(var r=0; r<row; r++)
 	{

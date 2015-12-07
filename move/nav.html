@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="author" content="智能社 - zhinengshe.com">
 <meta name="copyright" content="智能社 - zhinengshe.com">
-<title>智能社 - www.zhinengshe.com</title>
+<title>苹果导航</title>
 <style>
 * { margin:0; padding:0; }
-body { padding-top:100px; text-align:center; }
+body { padding-top:100px; text-align:center; background:url(apple/apple_bg.jpg) no-repeat; }
 input { width:120px; height:40px; text-align:center; font-size:20px; }
 div { position:absolute; bottom:0; left:0; width:100%; text-align:center; }
 img { width:64px; height:64px; }
@@ -15,7 +15,6 @@ img { width:64px; height:64px; }
 <script>
 window.onload=function (){
 	var aImg=document.getElementsByTagName('img');
-	var aInput=document.getElementsByTagName('input');
 	var oDiv=document.getElementById('div1');
 	
 	document.onmousemove=function (ev){
@@ -35,8 +34,6 @@ window.onload=function (){
 			aImg[i].style.width=128*scale+'px';
 			aImg[i].style.height=128*scale+'px';
 			
-			// 测试
-			aInput[i].value=scale;
 		}
 	};
 };
@@ -59,12 +56,6 @@ function getPos(obj)
 </head>
 
 <body>
-	<input type="text" />
-	<input type="text" />
-	<input type="text" />
-	<input type="text" />
-	<input type="text" />
-
 	<div id="div1">
 		<img src="apple/1.png" />
 		<img src="apple/2.png" />

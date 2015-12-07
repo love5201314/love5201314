@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<base target="_blank" />
 	<meta charset="UTF-8">
 	<title>My website</title>
 	<link rel="stylesheet" href="css/inme.css">
@@ -15,82 +16,137 @@
 	<header class="clearFix">
 		<div class="fl loog">My website</div>
 		<ul class="nav clearFix fr">
-			<li><a href="javascript:;">Resume</a></li>
-			<li><a href="javascript:;">HTML+CSS</a></li>
-			<li><a href="javascript:;">JavaScript</a></li>
-			<li><a href="javascript:;">HTML5+CSS3</a></li>
+			<li><a href="javascript:;">首页</a></li>
+			<li><a href="javascript:;">MASELF</a></li>
+			<li><a href="javascript:;">我的技能</a></li>
+			<li><a href="javascript:;">作品合集</a></li>
 			<li class="active"></li>
 		</ul>
 	</header>
 	<div class="box" id="large-header">
+		<div id="large-header" class="large-header">
+			<canvas id="demo-canvas"></canvas>
+			<script src="js/TweenLite.min.js"></script>
+			<script src="js/EasePack.min.js"></script>
+			<script src="js/demo-1.js"></script>
+		</div>
 		<div class="box_z">
-			<div class="can_box clearFix">
-				<!-- <canvas id="c1" width="800" height="600"></canvas> -->
-				<div id="large-header" class="large-header">
-					<canvas id="demo-canvas"></canvas>
-					<script src="js/TweenLite.min.js"></script>
-					<script src="js/EasePack.min.js"></script>
-					<script src="js/demo-1.js"></script>
+			<div class="can_box">
+				<canvas id="c1" width="800" height="600"></canvas>
+			</div>
+			<div class="the">
+				<h1>刘洋志的个人网站</h1>
+				<p>无论什么时候，不管遇到什么情况，我绝不允许自己有一点点灰心丧气</p>
+			</div>
+			<img class="img" src="image/ten1_bg.png">
+		</div>
+		<div class="box_z the2">
+			<div>
+				<h2>关于我</h2>
+				<p>ABOUT MASELF</p>
+			</div>
+			<div class="motto">
+				<p class="ani">能够对自己有一定清醒的认识，知道自己对于计算机世界的认识只是冰山一角，也正是知道自己所欠缺的，才能不断鞭策自己</p>
+				<p class="ani">不聪明，但还算努力，相信比天赋更可贵的是坚持不懈</p>
+				<p class="ani">不相信心灵鸡汤，相信行动远比想法重要</p>
+			</div>
+			<div class="line clearFix ani">
+				<span class="fl"><</span>
+				<span class="fr">></span>
+				<p class="fl"></p>
+			</div>
+			<ul class="clearFix">
+				<li class="ani"><span></span>刘洋志</li>
+				<li class="ani"><span></span>877785919</li>
+				<li class="ani"><span></span>承德石油高等专科学校</li>
+				<li class="ani"><span></span>877785919@qq.com</li>
+				<li class="ani"><span></span>13522505057</li>
+			</ul>
+		</div>
+		<div class="box_z">
+			<div class="the3_top">
+				<h2>我的技能</h2>
+				<p>MY SKILLS</p>
+			</div>
+			<div class="ball">
+				<span class="round btn"></span>
+				<div class="btn btn1">我的简历</div>
+				<div class="btn btn2">刘洋志</div>
+				<div class="ball_l">
+					<p>我的履历</p>
+					<ul>
+						<li>
+							<span style="color:#ccc">&lt;!--Begin--&gt;<span></span></span>
+						</li>
+						<li>&nbsp;&nbsp;&nbsp;HTML+CSS</li>
+						<li>&nbsp;&nbsp;&nbsp;CSS3&amp;HTML5</li>
+						<li>
+							&nbsp;&nbsp;&nbsp;
+							<span>JavaScript</span>
+							{
+						</li>
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOM</li>
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RegExp</li>
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ajax</li>
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jsonp</li>
+						<li>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;
+							<span>Jquery</span>
+						</li>
+						<li>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;
+							<span>zepto</span>
+						</li>
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tween.js&gt;</li>
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seajs</li>
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AngularJS</li>
+						<li>&nbsp;&nbsp;&nbsp;}</li>
+						<li>
+							&nbsp;&nbsp;&nbsp;&lt;
+							<span>MVC</span>
+						</li>
+						<li>&nbsp;&nbsp;&nbsp;&lt;Sublim Text</li>
+						<li>&nbsp;&nbsp;&nbsp;&lt;HBuilder</li>
+						<li>&nbsp;&nbsp;&nbsp;&lt;Git</li>
+						<li>
+							<span style="color:#ccc">&lt;!--End--&gt;</span>
+						</li>
+						<li></li>
+					</ul>
 				</div>
-				<!-- <div class="img">
-					<img src="image/aaa.png">
-				</div> -->
-				<div class="left fl">
-					<h2>专业技能</h2>
-					<p>1.精通HTML+CSS进行网页布局,根据设计图100%还原静态页面</p>
-					<p>2.熟练使用原生JavaScrpit，代码书写规范</p>
-					<p>3.熟练使用HTML5+CSS3。可以使用百分比，定宽，rem等布局方式编写移动端页面</p>
-					<p>4.了解jQuery,zepto,angular等前端框架</p>
-					<p>5.熟练使用seajs,Requirejs,mvc</p>
+				<div class="ball_r">
+					<p>我的技能</p>
+					<div class="ball_img">
+						<img src="image/js.png" style="width:154px ;margin-top:20px;margin-left:5px">
+			            <img src="image/html5.png" style="width:74px;margin-top:20px;margin-left:5px">
+			            <img src="image/css3.png" style="width:118px;margin-top:20px;margin-left:5px">
+			            <img src="image/pss.png" style="width:70px;margin-top:20px;margin-left:5px">
+			            <img src="image/dw.png" style="width:84px;margin-top:20px;margin-left:5px">
+					</div>
+					
 				</div>
-				<div class="right fl">
-					<h1>刘洋志</h1>
-					<p>性别：男</p>
-					<P>年龄：23</P>
-					<p>学历：大专</p>
-					<p>邮箱：877785919@qq.com</p>
-					<p>联系电话：13522505057</p>
-				</div>
-				
 			</div>
 		</div>
-<<<<<<< HEAD
 		<div class="box_z">
+			<a class="btn_left" href="javascript:;"><</a>
+			<a class="btn_right" href="javascript:;">></a>
 			<ul class="con">
-				<li class="mls"><a href="meilishuo/index.html"></a></li>
-				<li class="oppo"><a href="oppo/Untitled-1.html"></a></li>
-				<li class="youku"><a href="youku/index.html"></a></li>
+				<li class="mlss"><span><a class="mls" href="meilishuo/index.html"></a></span></li>
+				<li class="oppoo"><span><a class="oppo" href="oppo/Untitled-1.html"></a></span></li>
+				<li class="yk"><span><a class="youku" href="youku/index.html"></a></span></li>
+				<li class="jhs"><span><a href="H5/mao/index.html">聚划算</a></span></li>
+				<li class="ggg"><span><a href="H5/Goukr/index.html">Goukr</a></span></li>
+				<li class="hhh"><span><a href="H5/HEXAGONE/index.html">HEXAGONE</a></span></li>
+			</ul>
+			<ul class="con" style="display:none;">
+				<li class="sfq"><span><a href="move/move_qin.html" targit="_blank">手风琴</a></span></li>
+				<li class="zpq"><span><a href="move/move_cat.html" targit="_blank">照片墙</a></span></li>
+				<li class="lbt"><span><a href="move/move_fen.html" targit="_blank">分块运动</a></span></li>
+				<li class="pg"><span><a href="move/nav.html" targit="_blank">苹果菜单</a></span></li>
+				<li class="tan"><span><a href="move/tan.html" targit="_blank">弹性运动</a></span></li>
+				<li class="bd"><span><a href="move/baidu.html" targit="_blank">jsonpb百度搜索</a></span></li>
 			</ul>
 		</div>
-		<div class="box_z">
-			<ul class="con">
-				<li><a href="move/move_qin.html">手风琴</a></li>
-				<li><a href="move/move_cat.html">照片墙</a></li>
-				<li><a href="move/move_fen.html">分块运动</a></li>
-				<li><a href="move/nav.html">苹果菜单</a></li>
-				<li><a href="move/tan.html">弹性运动</a></li>
-				<li><a href="move/baidu.html">jsonpb百度搜索</a></li>
-			</ul>
-		</div>
-		<div class="box_z">
-			<ul class="con">
-				<li><a href="H5/mao/index.html">聚划算</a></li>
-				<li><a href="H5/Goukr/index.html">Goukr</a></li>
-				<li><a href="H5/HEXAGONE/index.html">HEXAGONE</a></li>
-				<li><a href="H5/tmydd/index.html">天猫移动端</a></li>
-			</ul>
-		</div>
-		<!-- <a href="javascriot:;" class="return">返回顶部</a> -->
 	</div>
 </body>
 </html>
-=======
-		<div class="box_z">2222222222222222222222</div>
-		<div class="box_z">3333333333333333333333</div>
-		<div class="box_z">4444444444444444444444</div>
-		<!-- <a href="javascriot:;" class="return">返回顶部</a> -->
-	</div>
-</body>
-</html>
-
->>>>>>> 7a369f75c729ab02b10c9b27e65774643770d55e
