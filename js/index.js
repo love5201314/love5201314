@@ -106,13 +106,11 @@ window.onload=window.onscroll=window.onresize=function(){
 	}
 	var oC=document.getElementById('c1');	
 	var gd=oC.getContext('2d');
-	var winW=document.documentElement.clientWidth;
-	var winH=document.documentElement.clientHeight;
-	oC.width=winW;
-	oC.height=winH;
-	var cx=winW/2,
-		cy=winH/2,
-		r=winH/4;
+	oC.width=600;
+	oC.height=600;
+	var cx=300,
+		cy=300,
+		r=150;
 	function drawArc(start,end,color,r){
 		color=color || '#000';
 		r=r || 100;
@@ -142,7 +140,7 @@ window.onload=window.onscroll=window.onresize=function(){
 	//首屏文字
 	var loog=document.querySelector('.the');
 	var conBox=document.querySelector('.can_box');
-	loog.style.marginTop=winH/4+'px';
+	loog.style.marginTop=document.documentElement.clientHeight/4+'px';
 	loog.style.left=0;
 	loog.style.opacity=1;
 	conBox.style.right=0;

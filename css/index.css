@@ -11,6 +11,7 @@ header .loog{ line-height:40px; height:40px; font-size:40px; margin-left:10px; f
 .box{ position:absolute; left:0; top:0; width:100%; height:100%; background:#333;}
 .box .box_z{ width:100%; z-index:2; position:relative; height:calc(100% - 80px); padding-top:80px;/* background:#191718;*/}
 .box .box_z:nth-child(1){ background:#333; }
+#c1{ position:absolute; left:50%; top:50%; margin-left:-300px; margin-top:-300px; }
 .return{ position:fixed; right:0; bottom:0; }
 /*canvas*/
 .can_box{opacity: 0; transition:1s all ease; height:100%; width:100%; position:absolute; right:500px; top:0; z-index:2;}
