@@ -10,15 +10,6 @@ window.onload=window.onscroll=window.onresize=function(){
 	//导航动画
 	var oNav=document.querySelector('header');
 	oNav.style.top=0;
-	//首页动画
-/*	var oN_l=document.querySelector('.left');
-	var oN_r=document.querySelector('.right');
-	
-	oN_l.style.left=0;
-	oN_r.style.right=0;*/
-
-
-
 	btn();
 
 	//翻页效果
@@ -52,6 +43,25 @@ window.onload=window.onscroll=window.onresize=function(){
 			{'complete':function(){
 				bFlag=false;
 		}});
+		//我的技能
+		var oRound=document.querySelector('.round');
+		if(iNow==2)
+		{	
+			var timer=setInterval(function(){
+				if(oRound.style.transform=='scale(1)')
+				{
+					oRound.style.transform='scale(1.1)';
+				}
+				else
+				{
+					oRound.style.transform='scale(1)';
+				}
+			},200);
+		}
+		else
+		{
+			clearInterval(timer);
+		}
 		btn();
 	});
 
@@ -148,19 +158,6 @@ window.onload=window.onscroll=window.onresize=function(){
 	var ten1Img=document.querySelector('.img');
 	ten1Img.style.bottom=0;
 
-
-	//圆
-	var oRound=document.querySelector('.round');
-	setInterval(function(){
-		if(oRound.style.transform=='scale(1)')
-		{
-			oRound.style.transform='scale(1.1)';
-		}
-		else
-		{
-			oRound.style.transform='scale(1)';
-		}
-	},200);
 	//点击效果
 	var oT3Btn1=document.querySelector('.btn1');
 	var oT3Btn2=document.querySelector('.btn2');
