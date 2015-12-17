@@ -45,7 +45,7 @@ header .loog{ line-height:40px; height:40px; font-size:40px; margin-left:10px; f
 .ball .btn2{ display:none;}
 .ball .btn1,.btn2{z-index:1; width:100%; height:100%;}
 .ball_l,.ball_r p{border-radius:8px; background:#122; width:118px; height:30px; line-height:30px; text-align:center; }
-.ball_l ul li{ line-height:25px; border-bottom:1px dotted #dbd3af;}
+.ball_l ul li{ line-height:23px; border-bottom:1px dotted #dbd3af;}
 .ball_l ul,.ball_r .ball_img{ transition: 1s all ease; display:none; opacity:0;}
 .ball_l{ transition: 1s all ease; position:absolute; left:0; top:85px; opacity:0;}
 .ball_r{ transition: 1s all ease; position:absolute; right:0; top:85px; opacity:0;}
