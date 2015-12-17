@@ -7,11 +7,11 @@ window.onload=window.onscroll=window.onresize=function(){
 	var oV=document.querySelector('.video');
 	var bFlag=false;
 	var iNow=0;
+	var atimer=null;
 	//导航动画
 	var oNav=document.querySelector('header');
 	oNav.style.top=0;
 	btn();
-
 	//翻页效果
 	addWheel(document,function(down){
 		if(bFlag)return;
@@ -38,16 +38,12 @@ window.onload=window.onscroll=window.onresize=function(){
 			oNav.style.paddingTop='20px';
 			oNav.style.boxShadow='';
 		}
-	
-		move(oBox,{top:-iNow*document.documentElement.clientHeight},
-			{'complete':function(){
-				bFlag=false;
-		}});
-		//我的技能
-		var oRound=document.querySelector('.round');
 		if(iNow==2)
-		{	
-			var timer=setInterval(function(){
+		{
+			//我的技能
+			var oRound=document.querySelector('.round');
+			oRound.style.transition='0.2s all linear';
+			atimer=setInterval(function(){
 				if(oRound.style.transform=='scale(1)')
 				{
 					oRound.style.transform='scale(1.1)';
@@ -60,8 +56,12 @@ window.onload=window.onscroll=window.onresize=function(){
 		}
 		else
 		{
-			clearInterval(timer);
+			clearInterval(atimer);
 		}
+		move(oBox,{top:-iNow*document.documentElement.clientHeight},
+			{'complete':function(){
+				bFlag=false;
+		}});
 		btn();
 	});
 
